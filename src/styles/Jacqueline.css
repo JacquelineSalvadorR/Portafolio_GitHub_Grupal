@@ -1,0 +1,85 @@
+.perfil-jacqueline {
+    background-color: rgb(240, 246, 248);
+    padding: 2rem;
+    border-radius: 12px;
+    color: black;
+  }
+  
+  
+  .perfil-jacqueline h2 {
+    color: #004080;
+  }
+  
+  .perfil-jacqueline h4 {
+    color: #0066cc;
+  }
+  
+  .perfil-jacqueline img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .perfil-jacqueline img:hover {
+    transform: scale(1.05);
+  }
+  .perfil-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .perfil-jacqueline {
+    min-height: 100vh;
+    padding: 2rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #9ff5e2, #f4f5e4, #e4bbe7, #f8edd6);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+  }
+  .perfil-jacqueline h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .perfil-jacqueline h5 {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  
+  .perfil-jacqueline p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: justify;
+  }
+  
+  .perfil-jacqueline ul {
+    font-size: 1.05rem;
+    padding-left: 1.2rem;
+  }
+  
+  .proyectos-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+  }
+  
+  .proyectos-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .proyectos-scroll::-webkit-scrollbar-thumb {
+    background: #ffffff55;
+    border-radius: 4px;
+  }
+  @keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  

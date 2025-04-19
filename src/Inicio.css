@@ -1,0 +1,46 @@
+.inicio-container {
+    background: linear-gradient(-45deg, #48c772, #d46f47, #c088e6, #5999d4, #ecbd66 );
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .zoom-btn {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .zoom-btn:hover {
+    transform: scale(1.1);
+  }
+  .nombre-integrante {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  
+  .nombre-integrante:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff22;
+  }
+  

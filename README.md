@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Portafolio Grupal Web - Grupo C
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto muestra el portafolio profesional de los integrantes del grupo C (NRC 23729), destacando nuestras habilidades, tecnologías dominadas y proyectos desarrollados. Ha sido elaborado como parte del curso de Construcción de Software (PA03).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Integrantes del equipo
 
-### `npm start`
+- Jacqueline Salvador Ríos
+- Francisco Chambi Vilca
+- Edgar Aliaga Rojas
+- Renzo Damian Ricra
+- Alexandra Tipacti Gil
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologías utilizadas
 
-### `npm test`
+- React.js
+- HTML / CSS
+- JavaScript
+- Git & GitHub
+- GitHub Pages
+- GitHub Actions (CI/CD)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Estructura del Proyecto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Página principal con presentación general del equipo.
+- Secciones individuales para cada integrante.
+- Animaciones visuales sutiles y diseño responsive.
+- Formulario de contacto decorado con imagen.
+- Galería de proyectos por miembro.
+- Barra de navegación fija que enlaza a todos los perfiles.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Despliegue automático
 
-### `npm run eject`
+Este portafolio se despliega automáticamente mediante **GitHub Actions**, utilizando un flujo de trabajo CI/CD:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Cada vez que se hace `push` a las ramas `main` o `deploy`, se actualiza automáticamente la versión publicada.
+- El archivo de configuración se encuentra en `.github/workflows/deploy.yaml`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Repositorio del Proyecto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🔗 [https://github.com/JacquelineSalvadorR/Portafolio_GitHub_Grupal](https://github.com/JacquelineSalvadorR/Portafolio_GitHub_Grupal)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📱 Accede desde cualquier dispositivo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Este proyecto fue diseñado como una SPA (Single Page Application) totalmente responsive, accesible desde computadoras, tablets y smartphones.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📌 Objetivo académico
 
-### Analyzing the Bundle Size
+El objetivo es aplicar buenas prácticas en la gestión del código usando **GitFlow**, integrando funcionalidades con un diseño limpio, animaciones, y CI/CD para producción continua. Este portafolio puede ser mostrado ante evaluadores académicos, reclutadores y docentes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🗓️ Estado del Proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+✅ En desarrollo – implementación de perfiles y mejoras visuales en curso.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🤝 Contribuciones
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Trabajo colaborativo siguiendo metodología **Kanban** y el modelo de ramas **GitFlow**.

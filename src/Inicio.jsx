@@ -13,10 +13,9 @@ const Inicio = ({ onEnter }) => {
   return (
     <div className="inicio-container" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <Container
-        className="d-flex flex-column align-items-center justify-content-start text-center"
+        className="d-flex flex-column align-items-center justify-content-center text-center"
         style={{
           minHeight: '100vh',
-          paddingTop:'5vh',
           paddingBottom: '2rem',
           color: 'white',
         }}

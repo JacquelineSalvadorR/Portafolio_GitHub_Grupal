@@ -1,3 +1,9 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 .inicio-container {
     background: linear-gradient(-45deg, #48c772, #d46f47, #c088e6, #5999d4, #ecbd66 );
     background-size: 400% 400%;

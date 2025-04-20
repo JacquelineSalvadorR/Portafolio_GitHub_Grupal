@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/Portafolio_GitHub_Grupal/static/css/main.fb99cf94.css",
-    "main.js": "/Portafolio_GitHub_Grupal/static/js/main.34f0853a.js",
+    "main.js": "/Portafolio_GitHub_Grupal/static/js/main.1c2a9432.js",
     "static/js/453.ba334b65.chunk.js": "/Portafolio_GitHub_Grupal/static/js/453.ba334b65.chunk.js",
     "static/media/sistemaventas_jatech.png": "/Portafolio_GitHub_Grupal/static/media/sistemaventas_jatech.64fa463beeac7fb10cbe.png",
     "static/media/avp_agendas.png": "/Portafolio_GitHub_Grupal/static/media/avp_agendas.47c0956d8b58aadbe201.png",
     "static/media/e1.jpg": "/Portafolio_GitHub_Grupal/static/media/e1.8853003cda2ca3601ee7.jpg",
     "static/media/project-img4.png": "/Portafolio_GitHub_Grupal/static/media/project-img4.2555fe47d633337cdb2f.png",
+    "static/media/contacto.png": "/Portafolio_GitHub_Grupal/static/media/contacto.16d9eebc78d17de556b3.png",
     "static/media/project-img1.png": "/Portafolio_GitHub_Grupal/static/media/project-img1.25ec0042a42d5f4e31af.png",
     "static/media/e2.jpg": "/Portafolio_GitHub_Grupal/static/media/e2.5856deef470327903bdb.jpg",
     "static/media/f1.jpg": "/Portafolio_GitHub_Grupal/static/media/f1.5a85d7fef02f6a10bd93.jpg",
@@ -20,13 +21,16 @@
     "static/media/a1.jpg": "/Portafolio_GitHub_Grupal/static/media/a1.0388329301bee9cb0159.jpg",
     "static/media/a2.jpg": "/Portafolio_GitHub_Grupal/static/media/a2.da053c1f414c30a8333a.jpg",
     "static/media/a3.jpg": "/Portafolio_GitHub_Grupal/static/media/a3.48a7efde85566fa64586.jpg",
+    "static/media/jacqueline.jpg": "/Portafolio_GitHub_Grupal/static/media/jacqueline.b84c28b36234b9445bcd.jpg",
+    "static/media/alexandra.jpg": "/Portafolio_GitHub_Grupal/static/media/alexandra.cdb0434abb17bf19f315.jpg",
+    "static/media/francisco.jpg": "/Portafolio_GitHub_Grupal/static/media/francisco.f2ce79cad518e12d3bd1.jpg",
     "index.html": "/Portafolio_GitHub_Grupal/index.html",
     "main.fb99cf94.css.map": "/Portafolio_GitHub_Grupal/static/css/main.fb99cf94.css.map",
-    "main.34f0853a.js.map": "/Portafolio_GitHub_Grupal/static/js/main.34f0853a.js.map",
+    "main.1c2a9432.js.map": "/Portafolio_GitHub_Grupal/static/js/main.1c2a9432.js.map",
     "453.ba334b65.chunk.js.map": "/Portafolio_GitHub_Grupal/static/js/453.ba334b65.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fb99cf94.css",
-    "static/js/main.34f0853a.js"
+    "static/js/main.1c2a9432.js"
   ]
 }

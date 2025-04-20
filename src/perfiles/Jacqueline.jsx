@@ -35,8 +35,8 @@ const Jacqueline = () => {
         <h4 className="perfil-titulo">{info.tagline}</h4>
 
         <div className="descripcion-box">
-          <p className="perfil-descripcion">{info.description}</p>
-        </div>
+  <p className="perfil-descripcion">{info.description}</p>
+</div>
 
         <hr className="separador" />
 

@@ -1,14 +1,20 @@
 import React from 'react';
-import { Navbar, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import '../styles/Navbar.css';
 
-const MyNavbar = () => {
+const Navbar = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
-      <Container>
-        <Navbar.Brand href="/">Portafolio Grupal</Navbar.Brand>
-      </Container>
-    </Navbar>
+    <nav className="navbar-glass">
+      <ul className="navbar-links">
+        <li><Link to="/">Inicio</Link></li>
+        <li><Link to="/perfil/jacqueline-salvador">Jacqueline</Link></li>
+        <li><Link to="/perfil/edgar-aliaga">Edgar</Link></li>
+        <li><Link to="/perfil/alexandra-tipacti">Alexandra</Link></li>
+        <li><Link to="/perfil/francisco-chambi">Francisco</Link></li>
+        <li><Link to="/perfil/renzo-damian">Renzo</Link></li>
+      </ul>
+    </nav>
   );
 };
 
-export default MyNavbar;
+export default Navbar;

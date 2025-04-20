@@ -1,13 +1,16 @@
 Css 
 
 
-/* Contenedor general */
 .perfil-container {
   min-height: 100vh;
-  padding: 4rem 2rem;
+  margin: 0;
+  padding: 2rem 1rem 4rem 1rem; /* menos espacio arriba */
   font-family: 'Poppins', sans-serif;
   color: white;
   background: linear-gradient(135deg, #d694a7, #d8a989);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;

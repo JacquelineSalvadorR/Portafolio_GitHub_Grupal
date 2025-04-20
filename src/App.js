@@ -7,6 +7,7 @@ import Alexandra from './perfiles/Alexandra';
 import Francisco from './perfiles/Francisco';
 import Renzo from './perfiles/Renzo';
 import Navbar from './components/Navbar';
+import './App.css';
 
 const Rutas = () => {
   const location = useLocation();

@@ -39,4 +39,7 @@
 .nav-link:hover {
   transform: scale(1.1);
 }
+.navbar-glass {
+  overflow-x: hidden; /* ← importante si los links se van de ancho en pantallas chicas */
+}
 

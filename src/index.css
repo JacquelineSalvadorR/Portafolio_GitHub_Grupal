@@ -11,19 +11,10 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
-}
-
-/* Fondo animado global (el que usas en la página de inicio) */
-body {
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: none;
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
-  }
-  
+  background: linear-gradient(135deg, #b084cc, #d38080); /* o el que tú uses */
+  background-attachment: fixed;
+  background-size: cover;
+  scroll-behavior: smooth;
 }
 
 /* Animación del gradiente */

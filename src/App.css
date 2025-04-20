@@ -30,3 +30,19 @@ button {
   padding: 2rem;
   border-radius: 12px;
 }
+#root {
+  min-height: 100vh;
+  overflow: hidden;
+}
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.perfil-container {
+  flex: 1;
+  padding-bottom: 3rem; /* espacio para evitar que el footer o navbar tape contenido */
+}
+

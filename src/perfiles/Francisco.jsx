@@ -1,38 +1,46 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { FaReact, FaDatabase, FaCode, FaLinkedin, FaGithub, FaTwitter, FaDiscord } from 'react-icons/fa';
+import {FaReact,FaGitAlt,FaCss3Alt,FaDocker,FaNodeJs,FaLinkedin,FaGithub,FaTwitter,FaDiscord} from 'react-icons/fa';
 import '../styles/Jacqueline.css';
 import portfolioData from '../data/info';
+import fotoFrancisco from '../assets/img/francisco.jpg';
 
 const Francisco = () => {
   const perfil = portfolioData.find((p) => p.info.name === 'Francisco Chambi');
   if (!perfil) return <p>Perfil no encontrado</p>;
 
   const { info, skills, projects } = perfil;
+  
   const skillIcons = {
-    React: <FaReact />, SQL: <FaDatabase />, 'Desarrollo Web': <FaCode />, Git: <FaCode />, CSS: <FaCode />, Docker: <FaCode />, 'Node.js': <FaCode />
+    Git: <FaGitAlt />,
+    CSS: <FaCss3Alt />,
+    Docker: <FaDocker />,
+    React: <FaReact />,
+    'Node.js': <FaNodeJs />
   };
 
   return (
     <motion.div
       className="perfil-jacqueline"
+      style={{ background: "linear-gradient(to right,rgb(219, 217, 230), #2c5364)" }}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
       <Container className="text-center my-5">
         <img
-          src={require('../assets/img/francisco.jpg')}
+          src={fotoFrancisco}
           alt="Francisco Chambi"
-          className="foto-perfil mx-auto"
+          className="perfil-foto"
         />
 
-        <h2 className="nombre">{info.name}</h2>
-        <h5 className="tagline">{info.tagline}</h5>
-        <div className="descripcion-box">
-          <p className="descripcion mx-auto">{info.description}</p>
-        </div>
+        <h1 className="perfil-nombre">{info.name}</h1>
+        <h4 className="perfil-titulo">{info.tagline}</h4>
+
+        <div className="descripcion-box" style={{ background: 'transparent' }}>
+  <p className="descripcion mx-auto">{info.description}</p>
+</div>
 
         <hr className="separador" />
 
@@ -95,16 +103,16 @@ const Francisco = () => {
             </Form>
 
             <div className="social-links mt-4 d-flex justify-content-center gap-3">
-              <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noreferrer">
+              <a href="#" target="_blank" rel="noreferrer">
                 <FaLinkedin size={30} color="white" />
               </a>
-              <a href="https://github.com/tuusuario" target="_blank" rel="noreferrer">
+              <a href="#" target="_blank" rel="noreferrer">
                 <FaGithub size={30} color="white" />
               </a>
-              <a href="https://x.com/tuusuario" target="_blank" rel="noreferrer">
+              <a href="#" target="_blank" rel="noreferrer">
                 <FaTwitter size={30} color="white" />
               </a>
-              <a href="https://discord.com/users/tuusuario" target="_blank" rel="noreferrer">
+              <a href="#" target="_blank" rel="noreferrer">
                 <FaDiscord size={30} color="white" />
               </a>
             </div>

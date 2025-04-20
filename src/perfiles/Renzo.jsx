@@ -46,26 +46,30 @@ const Renzo = () => {
   };
 
   return (
-    <motion.div className="perfil-jacqueline" style={{ background: "linear-gradient(to right, #1e3c72,rgb(134, 173, 240))" }}
+    <motion.div
+      className="perfil-jacqueline"
+      style={{ background: "linear-gradient(to right, #1e3c72, rgb(164, 195, 248))" }}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
       <Container className="text-center my-5">
-        <img
-          src={fotoRenzo}
-          alt="Renzo Damian"
-          className="foto-perfil mx-auto"
-        />
 
-        <h2 className="nombre">{info.nombre}</h2>
-        <h5 className="tagline">{info.tagline}</h5>
-        <div className="descripcion-box">
+        {/* FOTO de perfil */}
+        <img src={fotoRenzo} alt="Renzo Damian" className="perfil-foto" />
+
+        {/* NOMBRE y PROFESIÓN */}
+        <h1 className="perfil-nombre">{info.nombre}</h1>
+        <h4 className="perfil-titulo">{info.tagline}</h4>
+
+        {/* DESCRIPCIÓN */}
+        <div className="descripcion-box" style={{ background: 'transparent' }}>
           <p className="descripcion mx-auto">{info.descripcion}</p>
         </div>
 
         <hr className="separador" />
 
+        {/* HABILIDADES */}
         <h4 className="seccion-titulo">Habilidades</h4>
         <Row className="justify-content-center">
           {info.habilidades.map((habilidad, index) => (
@@ -85,6 +89,7 @@ const Renzo = () => {
 
         <hr className="separador" />
 
+        {/* PROYECTOS */}
         <h4 className="seccion-titulo">Proyectos</h4>
         <div className="proyectos-grid">
           {info.proyectos.map((proyecto, idx) => (
@@ -107,6 +112,7 @@ const Renzo = () => {
 
         <hr className="separador" />
 
+        {/* CONTÁCTAME */}
         <h4 className="seccion-titulo">Contáctame</h4>
         <Row className="contacto-form align-items-center">
           <Col md={6} className="mb-4">
@@ -124,6 +130,7 @@ const Renzo = () => {
               <Button variant="light" type="submit">Enviar</Button>
             </Form>
 
+            {/* REDES SOCIALES */}
             <div className="social-links mt-4 d-flex justify-content-center gap-3">
               <a href={info.redes.linkedin} target="_blank" rel="noreferrer">
                 <FaLinkedin size={30} color="white" />

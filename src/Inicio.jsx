@@ -65,7 +65,8 @@ const Inicio = ({ onEnter }) => {
                 size="lg"
                 className="nombre-integrante"
                 style={{ margin: '0.5rem' }}
-                onClick={() => navigate(`/perfil/${nombreRuta}`)}
+                onClick={() => navigate(`/${perfil.info.name.toLowerCase().split(' ')[0]}`)}
+
               >
                 {perfil.info.name}
               </Button>

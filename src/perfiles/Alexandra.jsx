@@ -1,43 +1,43 @@
-import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { motion } from "framer-motion";
-import { FaCode, FaLinkedin, FaGithub, FaTwitter, FaDiscord, FaGitAlt, FaCss3Alt, FaDocker, FaNodeJs, FaReact, FaDatabase, FaHtml5, FaShieldAlt } from "react-icons/fa";
-import "../styles/Jacqueline.css";
-import portfolioData from "../data/info";
+import React from 'react';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+import { FaReact, FaDatabase, FaHtml5, FaShieldAlt, FaLinkedin, FaGithub, FaTwitter, FaDiscord } from 'react-icons/fa';
+import '../styles/Jacqueline.css';
+import portfolioData from '../data/info';
+import fotoAlexandra from '../assets/img/alexandra.jpg';
 
 const Alexandra = () => {
-  const perfil = portfolioData.find((p) => p.info.name === "Alexandra Tipacti");
+  const perfil = portfolioData.find((p) => p.info.name === 'Alexandra Tipacti');
   if (!perfil) return <p>Perfil no encontrado</p>;
 
   const { info, skills, projects } = perfil;
-
   const skillIcons = {
     React: <FaReact />,
     SQL: <FaDatabase />,
     Html: <FaHtml5 />,
-    Ciberseguridad: <FaShieldAlt />,
-    Git: <FaGitAlt />
+    Ciberseguridad: <FaShieldAlt />
   };
-
+  
   return (
     <motion.div
       className="perfil-jacqueline"
-      style={{ background: "linear-gradient(to right, #6a11cb, #2575fc)" }}
+      style={{ background: "linear-gradient(to right,rgb(204, 144, 228),rgb(164, 238, 222))" }}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
       <Container className="text-center my-5">
         <img
-          src={require("../assets/img/alexandra.jpg")}
+          src={fotoAlexandra}
           alt="Alexandra Tipacti"
-          className="foto-perfil mx-auto"
+          className="perfil-foto"
         />
 
-        <h2 className="nombre">{info.name}</h2>
-        <h5 className="tagline">{info.tagline}</h5>
-        <div className="descripcion-box">
-          <p className="descripcion mx-auto" style={{ textShadow: "1px 1px 2px black" }}>{info.description}</p>
+        <h1 className="perfil-nombre">{info.name}</h1>
+        <h4 className="perfil-titulo">{info.tagline}</h4>
+
+        <div className="descripcion-box" style={{ background: 'transparent' }}>
+          <p className="descripcion mx-auto">{info.description}</p>
         </div>
 
         <hr className="separador" />
@@ -52,7 +52,7 @@ const Alexandra = () => {
                 animate={{ scale: 1 }}
                 transition={{ delay: idx * 0.2 }}
               >
-                <div>{skillIcons[skill] || "💡"}</div>
+                <div>{skillIcons[skill] || '💡'}</div>
                 <p>{skill}</p>
               </motion.div>
             </Col>
@@ -87,7 +87,7 @@ const Alexandra = () => {
         <Row className="contacto-form align-items-center">
           <Col md={6} className="mb-4">
             <img
-              src={require("../assets/img/contacto.png")}
+              src={require('../assets/img/contacto.png')}
               alt="Contacto"
               className="img-fluid contacto-img"
             />
@@ -101,16 +101,16 @@ const Alexandra = () => {
             </Form>
 
             <div className="social-links mt-4 d-flex justify-content-center gap-3">
-              <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noreferrer">
+              <a href="#" target="_blank" rel="noreferrer">
                 <FaLinkedin size={30} color="white" />
               </a>
-              <a href="https://github.com/tuusuario" target="_blank" rel="noreferrer">
+              <a href="#" target="_blank" rel="noreferrer">
                 <FaGithub size={30} color="white" />
               </a>
-              <a href="https://x.com/tuusuario" target="_blank" rel="noreferrer">
+              <a href="#" target="_blank" rel="noreferrer">
                 <FaTwitter size={30} color="white" />
               </a>
-              <a href="https://discord.com/users/tuusuario" target="_blank" rel="noreferrer">
+              <a href="#" target="_blank" rel="noreferrer">
                 <FaDiscord size={30} color="white" />
               </a>
             </div>

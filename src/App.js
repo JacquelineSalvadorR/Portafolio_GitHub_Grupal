@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavbarFija from './components/Navbar';
 import Inicio from './Inicio';
 import Jacqueline from './perfiles/Jacqueline';
 import Edgar from './perfiles/Edgar';
@@ -10,16 +11,15 @@ import Renzo from './perfiles/Renzo';
 function App() {
   return (
     <Router>
+      <NavbarFija />
+
       <Routes>
-        <Route
-          path="/"
-          element={<Inicio onEnter={() => window.scrollTo({ top: 800, behavior: 'smooth' })} />}
-        />
-        <Route path="/perfil/jacqueline-salvador" element={<Jacqueline />} />
-        <Route path="/perfil/edgar-aliaga" element={<Edgar />} />
-        <Route path="/perfil/alexandra-tipacti" element={<Alexandra />} />
-        <Route path="/perfil/francisco-chambi" element={<Francisco />} />
-        <Route path="/perfil/renzo-damian" element={<Renzo />} />
+        <Route path="/" element={<Inicio />} />
+        <Route path="/jacqueline" element={<Jacqueline />} />
+        <Route path="/francisco" element={<Francisco />} />
+        <Route path="/edgar" element={<Edgar />} />
+        <Route path="/alexandra" element={<Alexandra />} />
+        <Route path="/renzo" element={<Renzo />} />
       </Routes>
     </Router>
   );

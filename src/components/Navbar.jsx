@@ -2,10 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 
-;
 const Navbar = () => {
   return (
-    <nav className="navbar-custom">
+    <nav className="navbar-glass">
       <div className="navbar-left">
         <Link to="/" className="nav-link">Inicio</Link>
       </div>

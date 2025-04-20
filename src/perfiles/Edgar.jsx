@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import { SiCisco } from "react-icons/si";
 import { FaLinkedin, FaGithub, FaTwitter,FaPython, FaDiscord,FaNetworkWired } from 'react-icons/fa';
 import '../styles/Jacqueline.css';
 import portfolioData from '../data/info';

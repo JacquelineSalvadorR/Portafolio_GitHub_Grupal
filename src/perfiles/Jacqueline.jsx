@@ -5,6 +5,7 @@ import { FaReact, FaDatabase, FaCode, FaLinkedin, FaGithub, FaTwitter, FaDiscord
 import '../styles/Jacqueline.css';
 import portfolioData from '../data/info';
 import fotoJacqueline from '../assets/img/jacqueline.jpg';
+import contactoImg from '../assets/img/contacto.png';
 
 const Jacqueline = () => {
   const perfil = portfolioData.find((p) => p.info.name === 'Jacqueline Salvador');
@@ -33,8 +34,8 @@ const Jacqueline = () => {
         <h1 className="perfil-nombre">{info.name}</h1>
         <h4 className="perfil-titulo">{info.tagline}</h4>
 
-        <div className="descripcion-box" style={{ background: 'transparent' }}>
-          <p className="descripcion mx-auto">{info.description}</p>
+        <div className="descripcion-box">
+          <p className="perfil-descripcion">{info.description}</p>
         </div>
 
         <hr className="separador" />
@@ -60,17 +61,16 @@ const Jacqueline = () => {
 
         <h4 className="seccion-titulo">Proyectos</h4>
         <div className="proyectos-grid">
-  {projects.map((proyecto) => (
-    <div key={proyecto.id} className="proyecto-card">
-      <img src={proyecto.image} alt={proyecto.title} className="proyecto-imagen" />
-      <div className="proyecto-overlay">
-        <h4>{proyecto.title}</h4>
-        <p>{proyecto.description}</p>
-      </div>
-    </div>
-  ))}
-</div>
-
+          {projects.map((proyecto) => (
+            <div key={proyecto.id} className="proyecto-card">
+              <img src={proyecto.image} alt={proyecto.title} className="proyecto-imagen" />
+              <div className="proyecto-overlay">
+                <h4>{proyecto.title}</h4>
+                <p>{proyecto.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
 
         <hr className="separador" />
 
@@ -78,12 +78,13 @@ const Jacqueline = () => {
         <Row className="contacto-form align-items-center">
           <Col md={6} className="mb-4">
             <img
-              src={require('../assets/img/contacto.png')}
+              src={contactoImg}
               alt="Contacto"
               className="img-fluid contacto-img"
             />
           </Col>
           <Col md={6}>
+            <h4 className="mb-3 text-dark">¿Te gustaría contactarme?</h4>
             <Form>
               <Form.Control className="mb-3" type="text" placeholder="Tu nombre" />
               <Form.Control className="mb-3" type="email" placeholder="Tu correo" />

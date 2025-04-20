@@ -10,11 +10,11 @@ import Navbar from './components/Navbar';
 
 const Rutas = () => {
   const location = useLocation();
-  const mostrarNavbar = location.pathname !== "/";
+  const ocultarNavbarEnInicio = location.pathname.toLowerCase().replace(/\/$/, '') === '' || location.pathname === '/';
 
   return (
     <>
-      {mostrarNavbar && <Navbar />}
+      {!ocultarNavbarEnInicio && <Navbar />}
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/perfil/jacqueline-salvador" element={<Jacqueline />} />
@@ -36,4 +36,3 @@ function App() {
 }
 
 export default App;
-

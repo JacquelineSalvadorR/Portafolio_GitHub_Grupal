@@ -5,18 +5,18 @@ html, body, #root {
   overflow-x: hidden;
 }
 .inicio-container {
-    background: linear-gradient(-45deg, #48c772, #d46f47, #c088e6, #5999d4, #ecbd66 );
-    background-size: 400% 400%;
-    animation: gradientBackground 15s ease infinite;
-    min-height: 100vh;
-    padding: 2rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(-45deg, #48c772, #d46f47, #c088e6, #5999d4, #ecbd66 );
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
   @keyframes gradientBackground {
     0% {
       background-position: 0% 50%;

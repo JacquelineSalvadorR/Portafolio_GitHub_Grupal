@@ -34,9 +34,7 @@ const Jacqueline = () => {
         <h1 className="perfil-nombre">{info.name}</h1>
         <h4 className="perfil-titulo">{info.tagline}</h4>
 
-        <div className="descripcion-box">
-  <p className="perfil-descripcion">{info.description}</p>
-</div>
+        <p className="perfil-descripcion descripcion-box">{info.description}</p>
 
         <hr className="separador" />
 
@@ -46,9 +44,8 @@ const Jacqueline = () => {
             <Col key={idx} xs={6} md={3} className="mb-4">
               <motion.div
                 className="skill-icon"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: idx * 0.2 }}
+                whileHover={{ scale: 1.2 }}
+                transition={{ type: 'spring', stiffness: 300 }}
               >
                 <div>{skillIcons[skill] || '💡'}</div>
                 <p>{skill}</p>
@@ -61,29 +58,35 @@ const Jacqueline = () => {
 
         <h4 className="seccion-titulo">Proyectos</h4>
         <div className="proyectos-grid">
-  {projects.map((proyecto) => (
-    <div key={proyecto.id} className="proyecto-card">
-      <img src={proyecto.image} alt={proyecto.title} className="proyecto-imagen" />
-      <div className="proyecto-overlay">
-        <h4>{proyecto.title}</h4>
-        <p>{proyecto.description}</p>
-      </div>
-    </div>
-  ))}
-</div>
+          {projects.map((proyecto) => (
+            <motion.div
+              key={proyecto.id}
+              className="proyecto-card"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="proyecto-overlay-container">
+                <img src={proyecto.image} alt={proyecto.title} className="proyecto-imagen" />
+                <div className="proyecto-overlay">
+                  <h4>{proyecto.title}</h4>
+                  <p>{proyecto.description}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
         <hr className="separador" />
 
         <h4 className="seccion-titulo">Contáctame</h4>
         <Row className="contacto-form align-items-center">
-          <Col md={6} className="mb-4">
+          <Col md={6} className="mb-4 order-md-2">
             <img
               src={contactoImg}
               alt="Contacto"
               className="img-fluid contacto-img"
             />
           </Col>
-          <Col md={6}>
+          <Col md={6} className="order-md-1">
             <h4 className="mb-3 text-dark">¿Te gustaría contactarme?</h4>
             <Form>
               <Form.Control className="mb-3" type="text" placeholder="Tu nombre" />
@@ -114,3 +117,4 @@ const Jacqueline = () => {
 };
 
 export default Jacqueline;
+

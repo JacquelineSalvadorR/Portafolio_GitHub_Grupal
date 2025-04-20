@@ -1,9 +1,13 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaTwitter, FaDiscord, FaHtml5, FaCss3Alt, FaCode } from "react-icons/fa";
+import {
+  FaLinkedin, FaGithub, FaTwitter, FaDiscord,
+  FaHtml5, FaCss3Alt, FaCode
+} from "react-icons/fa";
 import "../styles/Jacqueline.css";
 import fotoRenzo from "../assets/img/renzo.jpg";
+import contactoImg from "../assets/img/contacto.png";
 
 const Renzo = () => {
   const info = {
@@ -48,37 +52,35 @@ const Renzo = () => {
   return (
     <motion.div
       className="perfil-jacqueline"
-      style={{ background: "linear-gradient(to right, #1e3c72, rgb(164, 195, 248))" }}
+      style={{
+        background: "linear-gradient(to right, #1e3c72, rgb(164, 195, 248))",
+        minHeight: "100vh",
+        width: "100%",
+        margin: 0,
+        padding: 0,
+        overflowX: "hidden",
+        position: "relative",
+        top: 0,
+      }}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
       <Container className="text-center my-5">
-
-        {/* FOTO de perfil */}
         <img src={fotoRenzo} alt="Renzo Damian" className="perfil-foto" />
-
-        {/* NOMBRE y PROFESIÓN */}
         <h1 className="perfil-nombre">{info.nombre}</h1>
         <h4 className="perfil-titulo">{info.tagline}</h4>
-
-        {/* DESCRIPCIÓN */}
-        <div className="descripcion-box" style={{ background: 'transparent' }}>
-          <p className="descripcion mx-auto">{info.descripcion}</p>
-        </div>
+        <p className="perfil-descripcion">{info.descripcion}</p>
 
         <hr className="separador" />
-
-        {/* HABILIDADES */}
         <h4 className="seccion-titulo">Habilidades</h4>
         <Row className="justify-content-center">
           {info.habilidades.map((habilidad, index) => (
             <Col key={index} xs={6} md={3} className="mb-4">
               <motion.div
                 className="skill-icon"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: index * 0.2 }}
+                whileHover={{ scale: 1.2 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
                 <div>{skillIcons[habilidad] || "💡"}</div>
                 <p>{habilidad}</p>
@@ -88,22 +90,24 @@ const Renzo = () => {
         </Row>
 
         <hr className="separador" />
-
-        {/* PROYECTOS */}
         <h4 className="seccion-titulo">Proyectos</h4>
         <div className="proyectos-grid">
           {info.proyectos.map((proyecto, idx) => (
             <motion.div
-              className="card-overlay-proyecto"
               key={proyecto.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.2 }}
+              className="proyecto-card"
+              initial={{ opacity: 0, y: 120 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: idx * 0.25, ease: "easeOut" }}
+              whileHover={{ scale: 1.08 }}
             >
-              <img src={proyecto.imagen} alt={proyecto.titulo} />
-              <div className="overlay">
-                <h5>{proyecto.titulo}</h5>
+              <img
+                src={proyecto.imagen}
+                alt={proyecto.titulo}
+                className="proyecto-imagen"
+              />
+              <div className="proyecto-overlay">
+                <h4>{proyecto.titulo}</h4>
                 <p>{proyecto.descripcion}</p>
               </div>
             </motion.div>
@@ -111,42 +115,52 @@ const Renzo = () => {
         </div>
 
         <hr className="separador" />
-
-        {/* CONTÁCTAME */}
-        <h4 className="seccion-titulo">Contáctame</h4>
-        <Row className="contacto-form align-items-center">
-          <Col md={6} className="mb-4">
+        <h4
+          className="seccion-titulo text-center"
+          style={{ fontSize: "2rem", fontFamily: "Poppins, sans-serif" }}
+        >
+          Contáctame
+        </h4>
+        <div className="contacto-form d-flex flex-md-row flex-column-reverse align-items-center justify-content-center gap-4">
+          <div className="contacto-img-box text-center">
             <img
-              src={require("../assets/img/contacto.png")}
-              alt="Contacto"
-              className="img-fluid contacto-img"
+              src={contactoImg}
+              alt="Decoración"
+              className="contacto-img img-fluid"
             />
-          </Col>
-          <Col md={6}>
+          </div>
+
+          <div className="contacto-form-box">
             <Form>
               <Form.Control className="mb-3" type="text" placeholder="Tu nombre" />
               <Form.Control className="mb-3" type="email" placeholder="Tu correo" />
-              <Form.Control className="mb-3" as="textarea" rows={3} placeholder="Tu mensaje" />
-              <Button variant="light" type="submit">Enviar</Button>
+              <Form.Control
+                className="mb-3"
+                as="textarea"
+                rows={3}
+                placeholder="Tu mensaje"
+              />
+              <Button variant="light" type="submit">
+                Enviar
+              </Button>
             </Form>
 
-            {/* REDES SOCIALES */}
-            <div className="social-links mt-4 d-flex justify-content-center gap-3">
+            <div className="redes-footer mt-4 d-flex justify-content-center gap-3">
               <a href={info.redes.linkedin} target="_blank" rel="noreferrer">
-                <FaLinkedin size={30} color="white" />
+                <FaLinkedin size={30} />
               </a>
               <a href={info.redes.github} target="_blank" rel="noreferrer">
-                <FaGithub size={30} color="white" />
+                <FaGithub size={30} />
               </a>
               <a href={info.redes.twitter} target="_blank" rel="noreferrer">
-                <FaTwitter size={30} color="white" />
+                <FaTwitter size={30} />
               </a>
               <a href={info.redes.discord} target="_blank" rel="noreferrer">
-                <FaDiscord size={30} color="white" />
+                <FaDiscord size={30} />
               </a>
             </div>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Container>
     </motion.div>
   );

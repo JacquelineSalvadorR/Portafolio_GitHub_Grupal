@@ -1,20 +1,17 @@
 Css 
 
-
-.perfil-container {
+.perfil-jacqueline {
   min-height: 100vh;
+  width: 100%;
   margin: 0;
-  padding: 2rem 1rem 4rem 1rem; /* menos espacio arriba */
+  padding-top: 2rem;
+  background: none; /* 👈 Quitamos el fondo */
   font-family: 'Poppins', sans-serif;
-  color: white;
-  background: linear-gradient(135deg, #d694a7, #d8a989);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  overflow-x: hidden;
+  box-sizing: border-box;
+    padding-top: 80px; /* altura del navbar */
+  }
+  
 
 /* Foto de perfil */
 .perfil-foto {
@@ -23,19 +20,22 @@ Css
   object-fit: cover;
   border-radius: 50%;
   border: 6px solid white;
-  margin: 0 auto 1rem auto;
+  margin: 2rem auto 1rem auto;
   display: block;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Nombre, título y descripción */
 .perfil-nombre {
-  font-size: 2.8rem;
-  font-weight: bold;
-  margin: 0.5rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;           /* similar al de Renzo */
+  font-weight: 700;
+  color: white;
   text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* un leve glow */
 }
-
   .perfil-titulo {
     color: #f8e7a2; /* un dorado claro que resalta en cualquier fondo */
     font-size: 1.5rem;
@@ -58,16 +58,31 @@ Css
   }
   
 
-.perfil-descripcion {
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 1.5rem 2rem;
-  border-radius: 20px;
-  max-width: 800px;
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
+  .perfil-descripcion {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 0 auto 2rem auto;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    
+  }
+
+  .descripcion-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto 2rem auto; /* 👈 Esto lo centra */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;       /* 👈 Alineación del texto */
+  }
+  
 
 /* Secciones */
 .perfil-seccion {
@@ -84,6 +99,16 @@ Css
   display: inline-block;
   padding-bottom: 0.5rem;
 }
+
+.seccion-titulo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin: 2rem 0 1.5rem 0;
+}
+
 
 /* Habilidades */
 .perfil-skills {
@@ -103,7 +128,7 @@ Css
 
 .skill-icon:hover {
   transform: scale(1.2) rotate(5deg); /* 🔥 movimiento dinámico */
-  color: #ffd1dc; /* Puedes cambiar el color al pasar */
+  color: #f7f4f4; /* Puedes cambiar el color al pasar */
 }
 
 .skill-icon p {
@@ -112,6 +137,7 @@ Css
   font-weight: 500;
 }
 
+  
 
 /* Proyectos */
 .proyectos-grid {
@@ -123,9 +149,10 @@ Css
 
 .proyecto-card {
   position: relative;
-  border-radius: 12px;
-  overflow: hidden;
+  width: 100%;
   height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease;
 }
@@ -133,30 +160,35 @@ Css
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
   padding: 1rem;
   text-align: center;
-  transition: opacity 0.3s ease;
+  border-radius: 20px;
 }
-
 .proyecto-card:hover .proyecto-overlay {
   opacity: 1;
 }
 
+.proyecto-card:hover {
+  transform: scale(1.05);
+}
+
+
 .proyecto-imagen {
   width: 100%;
-  height: 100px;
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-  border-bottom: 3px solid #fff;
+  display: block;
+  border-radius: 20px;
 }
 
 .proyecto-info {
@@ -174,6 +206,9 @@ Css
   color: white;
   text-decoration: underline;
 }
+
+
+
 .card-overlay-proyecto {
   position: relative;
   width: 100%;
@@ -211,32 +246,37 @@ Css
 }
 
 /* Contacto */
-.contacto-form {
+.contacto-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 2rem;
-  padding: 2rem;
-  background: rgba(255,255,255,0.1);
+  padding: 3rem;
+  background: rgba(252, 244, 244, 0.08);
   border-radius: 20px;
-  width: 100%;
-  max-width: 1100px;
   margin: 0 auto;
+  max-width: 1100px;
 }
 
-.contacto-form img {
-  max-width: 280px;
+.contacto-img-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.contacto-img {
+  max-width: 340px;
   animation: flotar 3s ease-in-out infinite;
 }
 
-.contacto-form form {
+.contacto-form-box {
   flex: 1;
   min-width: 300px;
 }
 
-.contacto-form input,
-.contacto-form textarea {
+.contacto-form-box form input,
+.contacto-form-box form textarea {
   width: 100%;
   padding: 0.8rem;
   margin-bottom: 1rem;
@@ -246,9 +286,9 @@ Css
   border-radius: 8px;
 }
 
-.contacto-form button {
-  background-color: #d694a7;
-  color: white;
+.contacto-form-box button {
+  background-color: #faf5f5;
+  color: rgb(124, 118, 118);
   font-weight: bold;
   padding: 0.8rem 2rem;
   border: none;
@@ -257,49 +297,24 @@ Css
   width: 100%;
 }
 
-
-/* Imagen decorativa */
-.contacto-img {
-  animation: flotar 3s ease-in-out infinite;
-  max-width: 280px;
-}
-
 @keyframes flotar {
   0% { transform: translateY(0); }
   50% { transform: translateY(-12px); }
   100% { transform: translateY(0); }
 }
 
-/* Redes sociales al final */
 .redes-footer {
-  margin-top: 2rem;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  font-size: 1.8rem;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .redes-footer a {
-  color: #d694a7;
+  color: white;
   transition: transform 0.3s ease;
 }
+
 .redes-footer a:hover {
   transform: scale(1.2);
 }
-.descripcion-box {
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 1.5rem 2rem;
-  border-radius: 20px;
-  max-width: 800px;
-  margin: 0 auto 2rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.perfil-descripcion {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: white;
-  text-align: center;
-  margin: 0;
-}
-

@@ -7,6 +7,7 @@ import portfolioData from '../data/info';
 import fotoJacqueline from '../assets/img/jacqueline.jpg';
 import contactoImg from '../assets/img/contacto.png';
 
+
 const Jacqueline = () => {
   const perfil = portfolioData.find((p) => p.info.name === 'Jacqueline Salvador');
   if (!perfil) return <p>Perfil no encontrado</p>;
@@ -19,7 +20,16 @@ const Jacqueline = () => {
   return (
     <motion.div
       className="perfil-jacqueline"
-      style={{ background: "linear-gradient(to right,rgb(113, 170, 146),rgb(230, 210, 167))" }}
+      style={{
+        background: "linear-gradient(to right,rgb(113, 170, 146),rgb(230, 210, 167))",
+        minHeight: '100vh',
+        width: '100%',
+        margin: 0,
+        padding: 0,
+        overflowX: 'hidden',
+        position: 'relative',
+        top: 0
+      }}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -34,12 +44,13 @@ const Jacqueline = () => {
         <h1 className="perfil-nombre">{info.name}</h1>
         <h4 className="perfil-titulo">{info.tagline}</h4>
 
-        <p className="perfil-descripcion descripcion-box">{info.description}</p>
+        <p className="perfil-descripcion">{info.description}</p>
+
 
         <hr className="separador" />
 
         <h4 className="seccion-titulo">Habilidades</h4>
-        <Row className="justify-content-center">
+  <Row className="justify-content-center">
           {skills.map((skill, idx) => (
             <Col key={idx} xs={6} md={3} className="mb-4">
               <motion.div
@@ -55,66 +66,59 @@ const Jacqueline = () => {
         </Row>
 
         <hr className="separador" />
-
         <h4 className="seccion-titulo">Proyectos</h4>
         <div className="proyectos-grid">
-          {projects.map((proyecto) => (
-            <motion.div
-              key={proyecto.id}
-              className="proyecto-card"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="proyecto-overlay-container">
-                <img src={proyecto.image} alt={proyecto.title} className="proyecto-imagen" />
-                <div className="proyecto-overlay">
-                  <h4>{proyecto.title}</h4>
-                  <p>{proyecto.description}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+  {projects.map((proyecto, idx) => (
+    <motion.div
+      key={proyecto.id}
+      className="proyecto-card"
+      initial={{ opacity: 0, y: 120 }}             // 👈 sube desde más abajo
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: idx * 0.25, ease: 'easeOut' }} // 👈 animación más lenta
+      whileHover={{ scale: 1.08 }}                 // 👈 rebote más marcado al pasar mouse
+    >
+      <img
+        src={proyecto.image}
+        alt={proyecto.title}
+        className="proyecto-imagen"
+      />
+      <div className="proyecto-overlay">
+        <h4>{proyecto.title}</h4>
+        <p>{proyecto.description}</p>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
 
         <hr className="separador" />
+        <h4 className="seccion-titulo text-center" style={{ fontSize: "2rem", fontFamily: "Poppins, sans-serif" }}>
+  Contáctame
+</h4>
+        <div className="contacto-form d-flex flex-md-row flex-column-reverse align-items-center justify-content-center gap-4">
+  <div className="contacto-img-box text-center">
+    <img src={contactoImg} alt="Decoración" className="contacto-img img-fluid" />
+  </div>
 
-        <h4 className="seccion-titulo">Contáctame</h4>
-        <Row className="contacto-form align-items-center">
-          <Col md={6} className="mb-4 order-md-2">
-            <img
-              src={contactoImg}
-              alt="Contacto"
-              className="img-fluid contacto-img"
-            />
-          </Col>
-          <Col md={6} className="order-md-1">
-            <h4 className="mb-3 text-dark">¿Te gustaría contactarme?</h4>
-            <Form>
-              <Form.Control className="mb-3" type="text" placeholder="Tu nombre" />
-              <Form.Control className="mb-3" type="email" placeholder="Tu correo" />
-              <Form.Control className="mb-3" as="textarea" rows={3} placeholder="Tu mensaje" />
-              <Button variant="light" type="submit">Enviar</Button>
-            </Form>
+  <div className="contacto-form-box">
+    <Form>
+      <Form.Control className="mb-3" type="text" placeholder="Tu nombre" />
+      <Form.Control className="mb-3" type="email" placeholder="Tu correo" />
+      <Form.Control className="mb-3" as="textarea" rows={3} placeholder="Tu mensaje" />
+      <Button variant="light" type="submit">Enviar</Button>
+    </Form>
 
-            <div className="social-links mt-4 d-flex justify-content-center gap-3">
-              <a href="#" target="_blank" rel="noreferrer">
-                <FaLinkedin size={30} color="white" />
-              </a>
-              <a href="#" target="_blank" rel="noreferrer">
-                <FaGithub size={30} color="white" />
-              </a>
-              <a href="#" target="_blank" rel="noreferrer">
-                <FaTwitter size={30} color="white" />
-              </a>
-              <a href="#" target="_blank" rel="noreferrer">
-                <FaDiscord size={30} color="white" />
-              </a>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </motion.div>
-  );
+    <div className="redes-footer mt-4 d-flex justify-content-center gap-3">
+      <a href="#"><FaLinkedin size={30} /></a>
+      <a href="#"><FaGithub size={30} /></a>
+      <a href="#"><FaTwitter size={30} /></a>
+      <a href="#"><FaDiscord size={30} /></a>
+    </div>
+  </div>
+</div>
+</Container>
+</motion.div>
+);
 };
 
 export default Jacqueline;
-

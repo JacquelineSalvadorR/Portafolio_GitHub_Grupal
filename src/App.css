@@ -1,11 +1,15 @@
 /* Estilos globales */
 
+/* Fondo global neutro por si algún componente no tiene fondo propio */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Fira Code', monospace;
-  color: #fff;
+  min-height: 100vh;
+  background: none; /* Fondo transparente para que los perfiles manejen su propio fondo */
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
+
 
 h1, h2, h3, h4 {
   color: #004080;
@@ -32,7 +36,7 @@ button {
 }
 #root {
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;  /* permite scroll vertical, bloquea horizontal */
 }
 .App {
   min-height: 100vh;
@@ -40,9 +44,9 @@ button {
   flex-direction: column;
   overflow-x: hidden;
 }
-
-.perfil-container {
-  flex: 1;
-  padding-bottom: 3rem; /* espacio para evitar que el footer o navbar tape contenido */
+body {
+  overflow-y: auto !important;
 }
+
+
 

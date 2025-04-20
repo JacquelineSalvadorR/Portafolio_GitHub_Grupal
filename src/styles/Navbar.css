@@ -1,18 +1,17 @@
 .navbar-glass {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  margin: 0; /* 💥 elimina cualquier franja blanca arriba */
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05); /* más transparente */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.05); /* 💫 efecto cristalino */
+  backdrop-filter: blur(12px);          /* 💨 desenfoque detrás */
+  -webkit-backdrop-filter: blur(12px);  /* para Safari */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* sutil sombra */
   z-index: 1000;
-  overflow-x: hidden;
 }
 
 .navbar-left,
@@ -31,7 +30,7 @@
 }
 
 .nav-link {
-  color: white; /* ✅ mejor visibilidad sobre fondos oscuros o con gradiente */
+  color: rgb(65, 65, 65); /* ✅ mejor visibilidad sobre fondos oscuros o con gradiente */
   text-decoration: none;
   margin: 0 1rem;
   font-weight: 500;

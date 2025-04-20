@@ -60,23 +60,17 @@ const Jacqueline = () => {
 
         <h4 className="seccion-titulo">Proyectos</h4>
         <div className="proyectos-grid">
-          {projects.map((project, idx) => (
-            <motion.div
-              className="card-overlay-proyecto"
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.2 }}
-            >
-              <img src={project.image} alt={project.title} />
-              <div className="overlay">
-                <h5>{project.title}</h5>
-                <p>{project.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+  {projects.map((proyecto) => (
+    <div key={proyecto.id} className="proyecto-card">
+      <img src={proyecto.image} alt={proyecto.title} className="proyecto-imagen" />
+      <div className="proyecto-overlay">
+        <h4>{proyecto.title}</h4>
+        <p>{proyecto.description}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
 
         <hr className="separador" />
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Inicio from './Inicio';
 import Jacqueline from './perfiles/Jacqueline';
 import Edgar from './perfiles/Edgar';
@@ -9,7 +10,10 @@ import Renzo from './perfiles/Renzo';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      {/* ✅ Agregamos el Navbar aquí */}
+      <Navbar />
+
       <Routes>
         <Route
           path="/"
@@ -21,8 +25,9 @@ function App() {
         <Route path="/perfil/francisco-chambi" element={<Francisco />} />
         <Route path="/perfil/renzo-damian" element={<Renzo />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
 export default App;
+

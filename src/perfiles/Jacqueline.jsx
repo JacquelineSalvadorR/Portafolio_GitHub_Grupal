@@ -61,16 +61,16 @@ const Jacqueline = () => {
 
         <h4 className="seccion-titulo">Proyectos</h4>
         <div className="proyectos-grid">
-          {projects.map((proyecto) => (
-            <div key={proyecto.id} className="proyecto-card">
-              <img src={proyecto.image} alt={proyecto.title} className="proyecto-imagen" />
-              <div className="proyecto-overlay">
-                <h4>{proyecto.title}</h4>
-                <p>{proyecto.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+  {projects.map((proyecto) => (
+    <div key={proyecto.id} className="proyecto-card">
+      <img src={proyecto.image} alt={proyecto.title} className="proyecto-imagen" />
+      <div className="proyecto-overlay">
+        <h4>{proyecto.title}</h4>
+        <p>{proyecto.description}</p>
+      </div>
+    </div>
+  ))}
+</div>
 
         <hr className="separador" />
 

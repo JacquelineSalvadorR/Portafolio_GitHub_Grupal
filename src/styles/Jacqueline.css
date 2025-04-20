@@ -33,13 +33,27 @@ Css
   text-align: center;
 }
 
-.perfil-titulo {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #f4e6ec;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
+  .perfil-titulo {
+    color: #f8e7a2; /* un dorado claro que resalta en cualquier fondo */
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid #f8e7a2;
+    animation: typing 2.8s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #f8e7a2 }
+  }
+  
 
 .perfil-descripcion {
   background-color: rgba(255, 255, 255, 0.15);
@@ -85,13 +99,14 @@ Css
 }
 
 .skill-icon:hover {
-  transform: scale(1.15);
+  transform: scale(1.2) rotate(5deg); /* 🔥 movimiento dinámico */
+  color: #ffd1dc; /* Puedes cambiar el color al pasar */
 }
 
-.skill-icon span {
-  display: block;
-  font-size: 1.1rem;
+.skill-icon p {
   margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 
@@ -148,6 +163,41 @@ Css
   font-weight: bold;
   color: white;
   text-decoration: underline;
+}
+.card-overlay-proyecto {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-overlay-proyecto:hover {
+  transform: translateY(-10px) scale(1.03); /* 🔥 Aquí el movimiento */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Más profundidad */
+}
+.card-overlay-proyecto .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transition: opacity 0.3s ease-in-out;
+  text-align: center;
+}
+
+.card-overlay-proyecto:hover .overlay {
+  opacity: 1;
 }
 
 /* Contacto */

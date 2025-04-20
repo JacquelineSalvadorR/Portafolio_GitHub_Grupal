@@ -1,8 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { FaPython, FaNetworkWired, FaLinkedin, FaGithub, FaTwitter, FaDiscord } from 'react-icons/fa';
-import { SiCisco } from 'react-icons/si';
+import { FaLinkedin, FaGithub, FaTwitter,FaPython, FaDiscord,FaNetworkWired } from 'react-icons/fa';
 import '../styles/Jacqueline.css';
 import portfolioData from '../data/info';
 import fotoEdgar from '../assets/img/edgar.jpg';
@@ -13,16 +12,17 @@ const Edgar = () => {
 
   const { info, skills, projects } = perfil;
   const skillIcons = {
-    Cisco: <SiCisco />,
-    Mikrotik: <FaNetworkWired />,
-    Python: <FaPython />,
-    Redes: <FaNetworkWired />
-  };
-  
+      Cisco: <SiCisco />,
+      Mikrotik: <FaNetworkWired />,
+      Python: <FaPython />,
+      Redes: <FaNetworkWired />
+    };
+
+
   return (
     <motion.div
       className="perfil-jacqueline"
-      style={{ background: "linear-gradient(to right,rgb(7, 9, 15),rgb(247, 233, 218))" }}
+      style={{ background: "linear-gradient(to right, #ff9966, #ff5e62)" }}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -37,7 +37,7 @@ const Edgar = () => {
         <h1 className="perfil-nombre">{info.name}</h1>
         <h4 className="perfil-titulo">{info.tagline}</h4>
 
-        <div className="descripcion-box" style={{ background: 'transparent' }}>
+        <div className="descripcion-box">
           <p className="descripcion mx-auto">{info.description}</p>
         </div>
 
